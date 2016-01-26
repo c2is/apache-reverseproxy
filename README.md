@@ -6,11 +6,11 @@ To use this container you need to generate the certificate.
 
 If you decide to extends the container add this line in your Dockerfile.
 The `-subj` option is used to configure the certificate:
-C (Country Name)
-ST (State or Province Name)
-L (Locality)
-O (Organization Name)
-CN (Common Name like FQDN)
+* C (Country Name)
+* ST (State or Province Name)
+* L (Locality)
+* O (Organization Name)
+* CN (Common Name like FQDN)
 
 exemple:
 ```
