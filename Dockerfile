@@ -27,11 +27,12 @@ RUN usermod -u 1000 www-data
 EXPOSE 80
 EXPOSE 443
 
-RUN a2enmod proxy 
-RUN a2enmod actions 
-RUN a2enmod rewrite 
+RUN a2enmod proxy
+RUN a2enmod actions
+RUN a2enmod rewrite
 RUN a2enmod socache_shmcb
 RUN a2enmod proxy_http
 RUN a2enmod headers
 
+CMD rm -rf /run/httpd/* /tmp/httpd*
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
